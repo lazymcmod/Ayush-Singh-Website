@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: 'Ancizar Sans', sans-serif;
+    background-color: rgb(0, 103, 184);
+    color: hsl(0, 0%, 0%);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.website {
+    font-family: 'WDXL Lubrifont TC', sans-serif;
+    font-size: 2.5em;
+    color: hsl(0, 0%, 0%);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.name {
+    font-family: 'WDXL Lubrifont TC', sans-serif;
+    font-size: 1.8em;
+    color: #34495e;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+p {
+    max-width: 800px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+p:first-of-type {
+    margin-top: 20px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+ul li:before {
+    content: '•';
+    color: #2ecc71;
+    position: absolute;
+    left: 0;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.social-media img {
+    width: 25px; /* Increased size for better visibility */
+    height: 25px; /* Increased size for better visibility */
+    margin: 0 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+.github, .instagram, .x {
+    width: 25px; /* Ensure these are consistent with the general social media image size */
+    height: 25px;
+}
+
+    .github {
+        width: 15px;
+        height: 15px;
+
+
+    }
+
+    .instagram {
+        width: 15px;
+        height: 15px;
+    }
+
+    .x {
+        width: 15px;
+        height: 15px;
+    }
+
+    .introduction-section {
+    max-width: 800px; /* Limits the width for better readability */
+    margin: 20px auto; /* Centers the section horizontally and adds vertical space */
+    background-color: #ffffff; /* White background for the card */
+    padding: 30px; /* Spacing inside the card */
+    border-radius: 12px; /* Slightly rounded corners for a softer look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* A more pronounced shadow for depth */
+    text-align: left; /* Aligns text to the left for standard reading flow */
+    border-top: 5px solid #f1c40f; /* A vibrant yellow top border for an accent */
+}
+
+/* Styling for the Introduction Heading */
+.introduction-section h3 {
+    font-family: 'WDXL Lubrifont TC', sans-serif; /* Uses your custom font */
+    font-size: 2em; /* Larger heading size */
+    color: #2c3e50; /* Dark blue-grey color for the heading */
+    margin-top: 0; /* Removes default top margin */
+    margin-bottom: 25px; /* Space below the heading */
+    position: relative; /* Needed for the pseudo-element underline */
+    display: inline-block; /* Makes the underline fit the text width */
+    padding-bottom: 10px; /* Space between text and underline */
+}
+
+/* Underline effect for the heading */
+.introduction-section h3::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    left: 0; /* Starts from the left edge of the heading */
+    bottom: 0; /* Positions at the bottom of the heading's padding */
+    width: 100%; /* Makes the underline span the full width of the text */
+    height: 3px; /* Thickness of the underline */
+    background-color: #e67e22; /* A warm orange color for the underline */
+    border-radius: 2px; /* Slightly rounded ends for the underline */
+}
+
+/* Styling for the Introduction Paragraph Text */
+.introduction-section p {
+    font-family: 'Ancizar Sans', sans-serif; /* Uses your custom body font */
+    font-size: 1.1em; /* Slightly larger text for readability */
+    color: #555; /* A softer dark grey for the text */
+    line-height: 1.8; /* Increased line spacing for better readability */
+    margin-bottom: 0; /* Removes any default bottom margin */
+    text-align: justify; /* Distributes text evenly, filling the lines */
+}
+
+/* Styling for links within the introduction paragraph */
+.introduction-section p a {
+    color: #3498db; /* A distinct blue color for links */
+    font-weight: bold; /* Makes links bold */
+    text-decoration: none; /* Removes default underline */
+    transition: color 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.introduction-section p a:hover {
+    color: #2980b9; /* Darker blue on hover */
+    text-decoration: underline; /* Shows underline on hover */
+}
+
+.website {
+    font-family: 'WDXL Lubrifont TC', sans-serif; /* Your custom font for headings */
+    font-size: 3.5em; /* Make it significantly larger */
+    color: #2c3e50; /* A strong, dark blue-grey for impact */
+    text-align: center; /* Center the text on the page */
+    margin-top: 40px; /* Add some space above it */
+    margin-bottom: 20px; /* Add space below it */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    letter-spacing: 2px; /* A little space between letters for a refined look */
+    /* Optional: If you want a subtle glow or more pop */
+    /* transition: all 0.3s ease-in-out; */
+    /* transform: scale(1.02); */
+}
+
+/* Optional: Add a hover effect for a touch of interactivity */
+/* .website:hover {
+    color: #3498db;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+} */
+
+ /* Styling for the MY SKILLS section container */
+.skills-section {
+    max-width: 800px; /* Limits the section width for better readability */
+    margin: 20px auto; /* Centers the section on the page and adds vertical spacing */
+    background-color: #ffffff; /* White background for the card effect */
+    padding: 30px; /* Internal spacing within the card */
+    border-radius: 12px; /* Smoothly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* A soft, subtle shadow for depth */
+    text-align: center; /* Centers the heading and the list items */
+    border-top: 5px solid #3498db; /* A vibrant blue accent border at the top */
+}
+
+/* Styling for the MY SKILLS heading */
+.skills-section h3 {
+    font-family: 'WDXL Lubrifont TC', sans-serif; /* Uses your distinctive heading font */
+    font-size: 2em; /* Makes the heading prominent */
+    color: #2c3e50; /* A dark, professional blue-grey color */
+    margin-top: 0; /* Removes default top margin */
+    margin-bottom: 25px; /* Adds space below the heading */
+    position: relative; /* Essential for positioning the ::after pseudo-element */
+    display: inline-block; /* Ensures the underline only spans the text width */
+}
+
+/* Underline effect for the heading */
+.skills-section h3::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    left: 50%; /* Starts the underline from the center horizontally */
+    transform: translateX(-50%); /* Adjusts its position to truly center it */
+    bottom: -10px; /* Positions the underline 10px below the text */
+    width: 60%; /* Sets the width of the underline relative to the heading text */
+    height: 3px; /* Thickness of the underline */
+    background-color: #2ecc71; /* A refreshing green color for the underline */
+    border-radius: 2px; /* Slightly rounded edges for the underline */
+}
+
+/* Styling for the skills list */
+.skills-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Enables Flexbox for arranging list items */
+    flex-wrap: wrap; /* Allows skill items to wrap to the next line if space is limited */
+    justify-content: center; /* Centers the skill items horizontally within the container */
+    gap: 15px; /* Creates space between individual skill items */
+}
+
+/* Styling for individual skill items (the "pills") */
+.skills-list li {
+    background-color: #ecf0f1; /* Light grey background for each skill tag */
+    color: #34495e; /* Darker text color for contrast */
+    padding: 12px 20px; /* Internal spacing within each skill pill */
+    border-radius: 25px; /* Creates the characteristic pill shape */
+    font-size: 1.1em; /* Slightly larger text for readability */
+    font-weight: bold; /* Makes the skill text stand out */
+    transition: all 0.3s ease; /* Smooth animation for hover effects */
+    cursor: default; /* Indicates that these are not clickable links */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle shadow for each pill */
+}
+
+/* Hover effect for skill items */
+.skills-list li:hover {
+    background-color: #3498db; /* Changes background to blue on hover */
+    color: #ffffff; /* Changes text to white on hover */
+    transform: translateY(-3px); /* Lifts the pill slightly on hover for a dynamic effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover for more depth */
+}
+
+/* Styling for the MY HOBBIES section container */
+.hobbies-section {
+    max-width: 800px; /* Limits the section width for better readability */
+    margin: 20px auto; /* Centers the section on the page and adds vertical spacing */
+    background-color: #ffffff; /* White background for the card effect */
+    padding: 30px; /* Internal spacing within the card */
+    border-radius: 12px; /* Smoothly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* A soft, subtle shadow for depth */
+    text-align: center; /* Centers the heading and the list items */
+    border-top: 5px solid #2ecc71; /* A refreshing green accent border at the top */
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px); /* Start slightly below for animation */
+    animation: fadeInSlideUp 1s ease-out forwards; /* Apply fade-in animation */
+    animation-delay: 1.1s; /* Stagger the animation to appear after other sections */
+}
+
+/* Styling for the MY HOBBIES heading */
+.hobbies-section h3 {
+    font-family: 'WDXL Lubrifont TC', sans-serif; /* Uses your distinctive heading font */
+    font-size: 2em; /* Makes the heading prominent */
+    color: #2c3e50; /* A dark, professional blue-grey color */
+    margin-top: 0; /* Removes default top margin */
+    margin-bottom: 25px; /* Adds space below the heading */
+    position: relative; /* Essential for positioning the ::after pseudo-element */
+    display: inline-block; /* Ensures the underline only spans the text width */
+}
+
+/* Underline effect for the heading */
+.hobbies-section h3::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    left: 50%; /* Starts the underline from the center horizontally */
+    transform: translateX(-50%); /* Adjusts its position to truly center it */
+    bottom: -10px; /* Positions the underline 10px below the text */
+    width: 60%; /* Sets the width of the underline relative to the heading text */
+    height: 3px; /* Thickness of the underline */
+    background-color: #3498db; /* A vibrant blue color for the underline */
+    border-radius: 2px; /* Slightly rounded edges for the underline */
+}
+
+/* Styling for the hobbies list */
+.hobbies-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Enables Flexbox for arranging list items */
+    flex-wrap: wrap; /* Allows hobby items to wrap to the next line if space is limited */
+    justify-content: center; /* Centers the hobby items horizontally within the container */
+    gap: 15px; /* Creates space between individual hobby items */
+}
+
+/* Styling for individual hobby items (the "pills") */
+.hobbies-list li {
+    background-color: #ecf0f1; /* Light grey background for each hobby tag */
+    color: #34495e; /* Darker text color for contrast */
+    padding: 12px 20px; /* Internal spacing within each hobby pill */
+    border-radius: 25px; /* Creates the characteristic pill shape */
+    font-size: 1.1em; /* Slightly larger text for readability */
+    font-weight: bold; /* Makes the hobby text stand out */
+    transition: all 0.3s ease; /* Smooth animation for hover effects */
+    cursor: default; /* Indicates that these are not clickable links */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle shadow for each pill */
+}
+
+/* Hover effect for hobby items */
+.hobbies-list li:hover {
+    background-color: #e74c3c; /* Changes background to a striking red on hover */
+    color: #ffffff; /* Changes text to white on hover */
+    transform: translateY(-3px); /* Lifts the pill slightly on hover for a dynamic effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover for more depth */
+}
+
+/* Styling for the MY HOBBIES section container */
+.hobbies-section {
+    max-width: 800px; /* Limits the section width for better readability */
+    margin: 20px auto; /* Centers the section on the page and adds vertical spacing */
+    background-color: #ffffff; /* White background for the card effect */
+    padding: 30px; /* Internal spacing within the card */
+    border-radius: 12px; /* Smoothly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* A soft, subtle shadow for depth */
+    text-align: center; /* Centers the heading and the list items */
+    border-top: 5px solid #2ecc71; /* A refreshing green accent border at the top */
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px); /* Start slightly below for animation */
+    animation: fadeInSlideUp 1s ease-out forwards; /* Apply fade-in animation */
+    animation-delay: 1.1s; /* Stagger the animation to appear after other sections */
+}
+
+/* Styling for the MY HOBBIES heading */
+.hobbies-section h3 {
+    font-family: 'WDXL Lubrifont TC', sans-serif; /* Uses your distinctive heading font */
+    font-size: 2em; /* Makes the heading prominent */
+    color: #2c3e50; /* A dark, professional blue-grey color */
+    margin-top: 0; /* Removes default top margin */
+    margin-bottom: 25px; /* Adds space below the heading */
+    position: relative; /* Essential for positioning the ::after pseudo-element */
+    display: inline-block; /* Ensures the underline only spans the text width */
+}
+
+/* Underline effect for the heading */
+.hobbies-section h3::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    left: 50%; /* Starts the underline from the center horizontally */
+    transform: translateX(-50%); /* Adjusts its position to truly center it */
+    bottom: -10px; /* Positions the underline 10px below the text */
+    width: 60%; /* Sets the width of the underline relative to the heading text */
+    height: 3px; /* Thickness of the underline */
+    background-color: #3498db; /* A vibrant blue color for the underline */
+    border-radius: 2px; /* Slightly rounded edges for the underline */
+}
+
+/* Styling for the hobbies list */
+.hobbies-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Enables Flexbox for arranging list items */
+    flex-wrap: wrap; /* Allows hobby items to wrap to the next line if space is limited */
+    justify-content: center; /* Centers the hobby items horizontally within the container */
+    gap: 15px; /* Creates space between individual hobby items */
+}
+
+/* Styling for individual hobby items (the "pills") */
+.hobbies-list li {
+    background-color: #ecf0f1; /* Light grey background for each hobby tag */
+    color: #34495e; /* Darker text color for contrast */
+    padding: 12px 20px; /* Internal spacing within each hobby pill */
+    border-radius: 25px; /* Creates the characteristic pill shape */
+    font-size: 1.1em; /* Slightly larger text for readability */
+    font-weight: bold; /* Makes the hobby text stand out */
+    transition: all 0.3s ease; /* Smooth animation for hover effects */
+    cursor: default; /* Indicates that these are not clickable links */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle shadow for each pill */
+}
+
+/* Hover effect for hobby items */
+.hobbies-list li:hover {
+    background-color: #e74c3c; /* Changes background to a striking red on hover */
+    color: #ffffff; /* Changes text to white on hover */
+    transform: translateY(-3px); /* Lifts the pill slightly on hover for a dynamic effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover for more depth */
+}
+
+/* Styling for the MY HOBBIES section container */
+.hobbies-section {
+    max-width: 800px; /* Limits the section width for better readability */
+    margin: 20px auto; /* Centers the section on the page and adds vertical spacing */
+    background-color: #ffffff; /* White background for the card effect */
+    padding: 30px; /* Internal spacing within the card */
+    border-radius: 12px; /* Smoothly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* A soft, subtle shadow for depth */
+    text-align: center; /* Centers the heading and the list items */
+    border-top: 5px solid #2ecc71; /* A refreshing green accent border at the top */
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px); /* Start slightly below for animation */
+    animation: fadeInSlideUp 1s ease-out forwards; /* Apply fade-in animation */
+    animation-delay: 1.1s; /* Stagger the animation to appear after other sections */
+}
+
+/* Styling for the MY HOBBIES heading */
+.hobbies-section h3 {
+    font-family: 'WDXL Lubrifont TC', sans-serif; /* Uses your distinctive heading font */
+    font-size: 2em; /* Makes the heading prominent */
+    color: #2c3e50; /* A dark, professional blue-grey color */
+    margin-top: 0; /* Removes default top margin */
+    margin-bottom: 25px; /* Adds space below the heading */
+    position: relative; /* Essential for positioning the ::after pseudo-element */
+    display: inline-block; /* Ensures the underline only spans the text width */
+}
+
+/* Underline effect for the heading */
+.hobbies-section h3::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    left: 50%; /* Starts the underline from the center horizontally */
+    transform: translateX(-50%); /* Adjusts its position to truly center it */
+    bottom: -10px; /* Positions the underline 10px below the text */
+    width: 60%; /* Sets the width of the underline relative to the heading text */
+    height: 3px; /* Thickness of the underline */
+    background-color: #3498db; /* A vibrant blue color for the underline */
+    border-radius: 2px; /* Slightly rounded edges for the underline */
+}
+
+/* Styling for the hobbies list */
+.hobbies-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Enables Flexbox for arranging list items */
+    flex-wrap: wrap; /* Allows hobby items to wrap to the next line if space is limited */
+    justify-content: center; /* Centers the hobby items horizontally within the container */
+    gap: 15px; /* Creates space between individual hobby items */
+}
+
+/* Styling for individual hobby items (the "pills") */
+.hobbies-list li {
+    background-color: #ecf0f1; /* Light grey background for each hobby tag */
+    color: #34495e; /* Darker text color for contrast */
+    padding: 12px 20px; /* Internal spacing within each hobby pill */
+    border-radius: 25px; /* Creates the characteristic pill shape */
+    font-size: 1.1em; /* Slightly larger text for readability */
+    font-weight: bold; /* Makes the hobby text stand out */
+    transition: all 0.3s ease; /* Smooth animation for hover effects */
+    cursor: default; /* Indicates that these are not clickable links */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle shadow for each pill */
+}
+
+/* Hover effect for hobby items */
+.hobbies-list li:hover {
+    background-color: #e74c3c; /* Changes background to a striking red on hover */
+    color: #ffffff; /* Changes text to white on hover */
+    transform: translateY(-3px); /* Lifts the pill slightly on hover for a dynamic effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover for more depth */
+}
+
+/* Styling for the MY HOBBIES section container */
+.hobbies-section {
+    max-width: 800px; /* Limits the section width for better readability */
+    margin: 20px auto; /* Centers the section on the page and adds vertical spacing */
+    background-color: #ffffff; /* White background for the card effect */
+    padding: 30px; /* Internal spacing within the card */
+    border-radius: 12px; /* Smoothly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* A soft, subtle shadow for depth */
+    text-align: center; /* Centers the heading and the list items */
+    border-top: 5px solid #2ecc71; /* A refreshing green accent border at the top */
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px); /* Start slightly below for animation */
+    animation: fadeInSlideUp 1s ease-out forwards; /* Apply fade-in animation */
+    animation-delay: 1.1s; /* Stagger the animation to appear after other sections */
+}
+
+/* Styling for the MY HOBBIES heading */
+.hobbies-section h3 {
+    font-family: 'WDXL Lubrifont TC', sans-serif; /* Uses your distinctive heading font */
+    font-size: 2em; /* Makes the heading prominent */
+    color: #2c3e50; /* A dark, professional blue-grey color */
+    margin-top: 0; /* Removes default top margin */
+    margin-bottom: 25px; /* Adds space below the heading */
+    position: relative; /* Essential for positioning the ::after pseudo-element */
+    display: inline-block; /* Ensures the underline only spans the text width */
+}
+
+/* Underline effect for the heading */
+.hobbies-section h3::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    left: 50%; /* Starts the underline from the center horizontally */
+    transform: translateX(-50%); /* Adjusts its position to truly center it */
+    bottom: -10px; /* Positions the underline 10px below the text */
+    width: 60%; /* Sets the width of the underline relative to the heading text */
+    height: 3px; /* Thickness of the underline */
+    background-color: #3498db; /* A vibrant blue color for the underline */
+    border-radius: 2px; /* Slightly rounded edges for the underline */
+}
+
+/* Styling for the hobbies list */
+.hobbies-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Enables Flexbox for arranging list items */
+    flex-wrap: wrap; /* Allows hobby items to wrap to the next line if space is limited */
+    justify-content: center; /* Centers the hobby items horizontally within the container */
+    gap: 15px; /* Creates space between individual hobby items */
+}
+
+/* Styling for individual hobby items (the "pills") */
+.hobbies-list li {
+    background-color: #ecf0f1; /* Light grey background for each hobby tag */
+    color: #34495e; /* Darker text color for contrast */
+    padding: 12px 20px; /* Internal spacing within each hobby pill */
+    border-radius: 25px; /* Creates the characteristic pill shape */
+    font-size: 1.1em; /* Slightly larger text for readability */
+    font-weight: bold; /* Makes the hobby text stand out */
+    transition: all 0.3s ease; /* Smooth animation for hover effects */
+    cursor: default; /* Indicates that these are not clickable links */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle shadow for each pill */
+}
+
+/* Hover effect for hobby items */
+.hobbies-list li:hover {
+    background-color: #e74c3c; /* Changes background to a striking red on hover */
+    color: #ffffff; /* Changes text to white on hover */
+    transform: translateY(-3px); /* Lifts the pill slightly on hover for a dynamic effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover for more depth */
+}
+
+/* Keyframe animation for the fade-in and slide-up effect (reused from previous sections) */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for the Thank You Message */
+.thank-you-message {
+    font-family: 'WDXL Lubrifont TC', sans-serif; /* Your custom heading font */
+    font-size: 2.2em; /* Make it large and impactful */
+    color: #e74c3c; /* A strong, vibrant red to immediately grab attention */
+    text-align: center; /* Center it on the page */
+    margin-top: 50px; /* Generous space above to separate it from preceding content */
+    margin-bottom: 50px; /* Generous space below it for a clean break */
+    padding: 20px; /* Add some internal spacing around the text */
+    background: linear-gradient(45deg, #f0f2f5, #ffffff); /* A subtle, modern gradient background */
+    border-radius: 15px; /* More rounded corners for a softer, inviting look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* A more prominent, deep shadow for a "pop" effect */
+    position: relative; /* Needed for any internal animations or pseudo-elements */
+    overflow: hidden; /* Ensures any content or effects stay within the rounded borders */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow for added depth and readability */
+    letter-spacing: 1px; /* Slightly increases space between letters for a refined look */
+    animation: pulse 2s infinite ease-in-out, fadeInSlideUp 1s ease-out forwards; /* Apply both pulsing and fade-in animations */
+    animation-delay: 1.4s; /* Delay the animation to appear after other sections */
+}
+
+/* Keyframe animation for the gentle pulsing effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
+    50% {
+        transform: scale(1.03); /* Slightly enlarge the message */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35); /* Enhance shadow for a stronger "beat" */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/* Styling for the Thank You Message */
+.thank-you-message {
+    font-family: 'WDXL Lubrifont TC', sans-serif; /* Use your special heading font */
+    font-size: 2.2em; /* Make it large and impactful */
+    color: #e74c3c; /* A strong, vibrant red to catch attention */
+    text-align: center; /* Center it on the page */
+    margin-top: 50px; /* Generous space above to separate it */
+    margin-bottom: 50px; /* Generous space below it */
+    padding: 20px; /* Add some padding around the text */
+    background: linear-gradient(45deg, #f0f2f5, #ffffff); /* A subtle gradient background */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* A more prominent, deep shadow */
+    position: relative; /* For the subtle animation effect */
+    overflow: hidden; /* Ensures content doesn't spill out with effects */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+    letter-spacing: 1px; /* Slightly increase letter spacing */
+    animation: pulse 2s infinite ease-in-out; /* Add a gentle pulsing animation */
+}
+
+/* Styling for the Social Media Section Container */
+.social-media-section {
+    max-width: 800px; /* Limits the section width for better readability */
+    margin: 40px auto; /* Centers the section on the page and adds generous vertical spacing */
+    background-color: #ffffff; /* White background for a clean "card" look */
+    padding: 30px; /* Internal spacing within the card */
+    border-radius: 12px; /* Smoothly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* A soft, noticeable shadow for depth */
+    text-align: center; /* Centers the heading and the social icons */
+    border-top: 5px solid #8e44ad; /* A unique purple accent border at the top */
+    opacity: 0; /* Start invisible for the animation */
+    transform: translateY(20px); /* Start slightly below for the animation */
+    animation: fadeInSlideUp 1s ease-out forwards; /* Apply the fade-in animation */
+    animation-delay: 1.7s; /* Stagger the animation to appear after other sections */
+}
+
+/* Styling for the Social Media Heading */
+.social-media-section h3 {
+    font-family: 'WDXL Lubrifont TC', sans-serif; /* Uses your distinctive heading font */
+    font-size: 2em; /* Makes the heading prominent and easy to read */
+    color: #2c3e50; /* A dark, professional blue-grey color */
+    margin-top: 0; /* Removes default top margin */
+    margin-bottom: 25px; /* Adds space below the heading */
+    position: relative; /* Essential for positioning the ::after pseudo-element */
+    display: inline-block; /* Ensures the underline only spans the text width */
+    padding-bottom: 10px; /* Adds space between text and underline */
+}
+
+/* Underline effect for the heading */
+.social-media-section h3::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    left: 50%; /* Starts the underline from the center horizontally */
+    transform: translateX(-50%); /* Adjusts its position to truly center it */
+    bottom: 0; /* Positions the underline at the very bottom of the heading's padding */
+    width: 60%; /* Sets the width of the underline relative to the heading text */
+    height: 3px; /* Thickness of the underline */
+    background-color: #9b59b6; /* A slightly lighter purple for the underline, complementing the top border */
+    border-radius: 2px; /* Slightly rounded edges for the underline */
+}
+
+/* Container for social icons to manage spacing and alignment */
+.social-icons {
+    display: flex; /* Uses Flexbox to arrange icons in a row */
+    justify-content: center; /* Centers the icons horizontally within their container */
+    gap: 25px; /* Creates significant space between individual icons */
+    flex-wrap: wrap; /* Allows icons to wrap to the next line on smaller screens */
+}
+
+/* Styling for individual social media image links */
+.social-icons a {
+    opacity: 0; /* Start invisible for the pop-in animation */
+    transform: scale(0); /* Start very small for the pop-in animation */
+    animation: popIn 0.5s ease-out forwards; /* Apply the pop-in animation */
+    /* No direct styles here, as styles are on the img itself */
+}
+
+/* Stagger the pop-in animation for each icon */
+.social-icons a:nth-child(1) { animation-delay: 2s; } /* GitHub */
+.social-icons a:nth-child(2) { animation-delay: 2.1s; } /* Instagram */
+.social-icons a:nth-child(3) { animation-delay: 2.2s; } /* X (Twitter) */
+
+
+/* Styling for individual social media images (the icons themselves) */
+.social-icons img {
+    width: 45px; /* Increased size for better visibility and easier tapping/clicking */
+    height: 45px; /* Maintains aspect ratio */
+    border-radius: 50%; /* Makes the background area behind the icon circular */
+    padding: 8px; /* Padding inside the circular background, effectively creating a border around the icon */
+    background-color: #ecf0f1; /* Light grey background for the icon area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for each icon */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Specific hover effects for each icon */
+.social-icons img.github:hover {
+    background-color: #24292e; /* GitHub's official black */
+    transform: translateY(-5px) scale(1.1); /* Lifts and slightly enlarges */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    filter: brightness(1.5); /* Makes the icon itself brighter on hover */
+}
+
+.social-icons img.instagram:hover {
+    /* Instagram's iconic gradient */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.2);
+}
+
+.social-icons img.x:hover {
+    background-color: #000000; /* X (Twitter)'s official black */
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.5);
+}
+
+/* Keyframe animation for the fade-in and slide-up effect (reused across sections) */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe animation for the pop-in effect (used for social icons) */
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.1); /* Overshoot for a bouncy effect */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Styling for the Thank You Message */
+.thank-you-message {
+    font-family: 'WDXL Lubrifont TC', sans-serif; /* Your custom heading font */
+    font-size: 2.2em; /* Make it large and impactful */
+    color: #e74c3c; /* A strong, vibrant red to immediately grab attention */
+    text-align: center; /* Center it on the page */
+    margin-top: 50px; /* Generous space above to separate it from preceding content */
+    margin-bottom: 50px; /* Generous space below it for a clean break */
+    padding: 20px; /* Add some internal spacing around the text */
+    background: linear-gradient(45deg, #f0f2f5, #ffffff); /* A subtle, modern gradient background */
+    border-radius: 15px; /* More rounded corners for a softer, inviting look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* A more prominent, deep shadow for a "pop" effect */
+    position: relative; /* Needed for any internal animations or pseudo-elements */
+    overflow: hidden; /* Ensures any content or effects stay within the rounded borders */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow for added depth and readability */
+    letter-spacing: 1px; /* Slightly increases space between letters for a refined look */
+    animation: pulse 2s infinite ease-in-out, fadeInSlideUp 1s ease-out forwards; /* Apply both pulsing and fade-in animations */
+    animation-delay: 1.4s; /* Delay the animation to appear after other sections */
+}
+
+/* Keyframe animation for the gentle pulsing effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
+    50% {
+        transform: scale(1.03); /* Slightly enlarge the message */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35); /* Enhance shadow for a stronger "beat" */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/* Keyframe animation for the fade-in and slide-up effect (reused from other sections) */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+        <body>
+            <P class="website">Welcome to My website</P>
+            <p class="name">My name is Ayush Singh</p>
+            <div class="introduction-section">
+    <h3>INTRODUCTION</h3>
+    <p>
+        My name is **Ayush Singh**. I'm a Computer Science student at <a href="https://www.mgkvp.ac.in/" target="_blank">MGKVP</a>, where I'm diving deep into the world of technology. My passion extends beyond the classroom; I love playing cricket and am a huge fan of Rohit Sharma & Jasprit Bumrah. My ultimate goal is to become a game developer, and right now, I'm eagerly learning web development to build a strong foundation. When I'm not coding or studying, you'll find me enjoying my favorite game, Minecraft!
+    </p>
+</div>
+                <div class="skills-section">
+    <h3>MY SKILLS</h3>
+    <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>C++</li>
+    </ul>
+</div>
+                <div class="hobbies-section">
+    <h3>MY HOBBIES</h3>
+    <ul class="hobbies-list">
+        <li>Playing Cricket</li>
+        <li>Playing Minecraft</li>
+        <li>Doing Coding</li>
+        <li>Watching Movies</li>
+        <li>Listening Music</li>
+    </ul>
+</div>
+
+<div class="social-media-section">
+    <h3>Follow me on social media:</h3>
+    <div class="social-icons">
+        <a href="https://github.com/lazymcmod" target="_blank" aria-label="GitHub Profile">
+            <img class="github" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="GitHub">
+        </a>
+        <a href="https://www.instagram.com/ayushsingh13_8/" target="_blank" aria-label="Instagram Profile">
+            <img class="instagram" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+        </a>
+        <a href="https://x.com/LazymcMod17581" target="_blank" aria-label="X (Twitter) Profile">
+            <img class="x" src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?semt=ais_hybrid&w=740" alt="X (formerly Twitter)">
+        </a>
+    </div>
+</div>
+<p>
+                Thank you for visit my website  
+            </P>
+        </body>
+    </head>
+</html>
